@@ -1,0 +1,12 @@
+Started by user [8mha:////4D4ZfBH18gYlI9i0TCvd/sCSXXnojqLhmMLE2Zl/LeFGAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/mi-first-job
+SSH: Connecting from host [40080114d6f2]
+SSH: Connecting with configuration [RemoteHost] ...
+SSH: EXEC: STDOUT/STDERR from command [export NAME=Jenkins
+echo "Hello from $NAME. Adam Smith The current date is $(date)" > /tmp/info] ...
+SSH: EXEC: completed after 200 ms
+SSH: Disconnecting configuration [RemoteHost] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Finished: SUCCESS

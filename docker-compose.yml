@@ -1,0 +1,34 @@
+version: '3'
+services:
+  jenkins:
+    container_name: "jenkins"
+    image: "jenkins/jenkins"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "$PWD/jenkins_home:/var/jenkins_home"
+    networks:
+      - "jenkins-course"
+
+  # postgresql
+  postgresql-jenkins:
+    image: postgres
+    container_name: jenkins-postgresql
+    volumes:
+      - "$PWD/postgres/data/postgres-jenkins:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_PASSWORD=somepwd112233
+      - POSTGRES_DB=postgres-jenkins
+    networks:
+      - "jenkins-course"
+
+  remote_host:
+    container_name: "remote-host"
+    image: remote-host
+    build:
+      # Dir to DockerFile
+      context: centos
+    networks:
+      - "jenkins-course"
+networks:
+  jenkins-course:

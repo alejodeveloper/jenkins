@@ -1,0 +1,8 @@
+Started by user [8mha:////4D4ZfBH18gYlI9i0TCvd/sCSXXnojqLhmMLE2Zl/LeFGAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/mi-first-job
+[mi-first-job] $ /bin/sh -xe /tmp/jenkins2345206026308631723.sh
++ export NAME=Jenkins
++ date
++ echo Hello Jenkins. The current date is Sat Jul  4 21:32:23 UTC 2020
+Finished: SUCCESS
