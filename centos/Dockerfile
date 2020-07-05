@@ -22,16 +22,17 @@ RUN useradd remote_user && \
 # Copy ssh key and pass it to centos in authorized keys
 COPY remote-key.pub /home/remote_user/.sshauthorized_keys
 
-COPY scripts/ /scripts
-
-RUN chmod 700 /scripts/
+RUN chmod -R 700 /scripts/
 RUN export PGPASSWORD="somepwd112233"
 
 RUN chown remote_user:remote_user -R /home/remote_user/.ssh/ && \
-    chmod 600 /home/remote_user/.sshauthorized_keys
+    chmod 600 /home/remote_user/.sshauthorized_keys && \
+    chown remote_user:remote_user -R /scripts && \
+    mkdir tmp/pg_data && \
+    chown remote_user:remote_user -R /tmp/pg_data
+
+RUN chmod -R 700 /tmp/pg_data
 
 RUN /usr/sbin/sshd-keygen
-
-
 
 CMD /usr/sbin/sshd -D
